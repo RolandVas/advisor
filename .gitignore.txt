@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+# Angular build output
+dist/
+out-tsc/
+
+# IDE configuration files
+/.idea/
+/.vscode/
+/.angular/
+/*.sublime-workspace
+
+# Environment files
+src/environments/environment*.ts
+
+# Optional logs and temporary files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json

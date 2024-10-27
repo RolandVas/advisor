@@ -1,0 +1,72 @@
+<div class="page-limiter header-spacer">
+    <h1>Új mentes hely felvétele</h1>
+
+    <form class="column padding-bottom-xlarge" [formGroup]="itemForm">
+        <!---------------------------------------- First Section ------------------------------------------------->
+        <mat-form-field>
+            <mat-label>Hely neve</mat-label>
+            <input matInput formControlName="title">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Leírás</mat-label>
+            <textarea matInput formControlName="description"></textarea>
+        </mat-form-field>
+
+        <div class="flex">
+            <mat-form-field class="flex-1 margin-right-medium">
+                <mat-label>Kategória</mat-label>
+                <mat-select formControlName="category" multiple>
+                    @for (category of categoryList; track category) {
+                    <mat-option [value]="category">{{category.label}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="flex-1">
+                <mat-label>Mentesség</mat-label>
+                <mat-select formControlName="freeFrom" multiple>
+                    @for (freeFrom of freeFromList; track freeFrom) {
+                    <mat-option [value]="freeFrom">{{freeFrom}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <!---------------------------------------- Social Media ------------------------------------------------->
+        <h2>Social Media</h2>
+        <div class="flex">
+            <mat-form-field class="flex-1 margin-right-base">
+                <mat-label>Weboldal</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field class="flex-1 margin-right-base">
+                <mat-label>Instagram</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field class="flex-1 margin-right-base">
+                <mat-label>Facebook</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field class="flex-1">
+                <mat-label>TikTok</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </div>
+        <!---------------------------------------- Address------------------------------------------------->
+        <h2>Cím</h2>
+        <div class="flex">
+            <mat-form-field class="flex-1 margin-right-base">
+                <mat-label>Cím</mat-label>
+                <input type="text"
+                       matInput
+                       formControlName="address">
+              </mat-form-field>
+              <button mat-flat-button (click)="onSubmit()" class="check-button">Check</button>
+        </div>
+
+        <div class="button-wrapper">
+            <button mat-flat-button class="save-button" (click)="saveItem()">Hely hozzáadása</button>
+        </div>
+
+          <div id="map" class="map"></div>
+    </form>
+</div>

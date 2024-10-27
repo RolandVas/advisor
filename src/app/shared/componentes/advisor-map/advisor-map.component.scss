@@ -1,0 +1,35 @@
+.popup {
+  position: absolute;
+  background-color: white;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 55px;
+  left: -50px;
+  min-width: 200px;
+
+  &-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    font-size: 25px;
+    color: black;
+
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.popup::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Position it at the bottom of the element */
+  left: 34px; /* It is positioned on the left side, but you can adjust the position */
+  width: 0;
+  height: 0;
+  border-left: 17px solid transparent; /* Left side of the triangle */
+  border-right: 15px solid transparent; /* Right side of the triangle */
+  border-top: 15px solid white; /* Top of the triangle */
+}

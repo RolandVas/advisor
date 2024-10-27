@@ -1,0 +1,65 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.page-limiter {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-spacer {
+  padding-top: 60px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.map {
+  height: 500px;
+  width: 100%;
+}
+
+
+//------------------------------------------- SPACER ------------------------------------------------------
+.margin-left-base {
+  margin-left: 16px;
+}
+
+.margin-left-medium {
+  margin-left: 24px;
+}
+
+.margin-right-base {
+  margin-right: 16px;
+}
+
+.margin-right-medium {
+  margin-right: 24px;
+}
+
+.padding-bottom-xlarge {
+  padding-bottom: 150px;
+}
+
+//------------------------------------------- SPACER END ------------------------------------------------------
