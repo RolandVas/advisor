@@ -1,1 +1,4 @@
 <advisor-map></advisor-map>
+@for (item of itemService.itemSig(); track $index) {
+    <app-item-presenter [item]="item"></app-item-presenter>
+}

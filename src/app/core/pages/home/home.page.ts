@@ -2,11 +2,12 @@ import { Component, inject, OnInit } from '@angular/core';
 import { FirestoreService } from '../../../services/firestore.service';
 import { ItemService } from '../../../services/item.service';
 import { AdvisorMapComponent } from '../../../shared/componentes/advisor-map/advisor-map.component';
+import { ItemPresenterComponent } from "../../../shared/componentes/item-presenter/item-presenter.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AdvisorMapComponent],
+  imports: [AdvisorMapComponent, ItemPresenterComponent],
   templateUrl: './home.page.html',
   styleUrl: './home.page.scss'
 })
